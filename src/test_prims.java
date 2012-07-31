@@ -10,7 +10,7 @@ public class test_prims {
         Sphere sphere1 = new Sphere(4.0f);
        // Cylinder cylinder1 = new Cylinder();
         
-        //Initialize three composite prims
+        //Initialize three composite primes
         Object pcom1 = new Object();
         Object pcom2 = new Object();
           
@@ -20,14 +20,15 @@ public class test_prims {
          pcom2.add(pcom1);
          pcom2.add(sphere1);
 
-     
          pcom2.render();
          System.out.println(pcom2.volume());
         
+         /*
          Iterator iterator = pcom2.createIterator();
          while (iterator.hasNext()) {
          	((Object_Component) iterator.next()).render();
            }
+           */
         }
 }
 

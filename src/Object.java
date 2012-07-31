@@ -1,14 +1,16 @@
-import java.util.ArrayList;;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Object {
+public class Object extends Object_Component {
+
 	
-	private ArrayList<Object_Component> components;
 	
-	public Object() {
-		components = new ArrayList<Object_Component>();
-	}
-	
-	public void add(Object_Component obj) {
-		components.add(obj);
+	public void render()
+	{
+		Iterator i = this.createIterator();
+		while (i.hasNext()) {
+			Object_Component o = (Object_Component) i.next();
+			o.render();
+		}
 	}
 }
